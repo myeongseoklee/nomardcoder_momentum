@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,41 +10,48 @@
 </head>
 <body>
     <div class="wrap">
-        <div class="back">
+        <!-- 배경 -->
+        <div class="back"> 
             <video autoplay loop muted>
-               <source src="./img/back/back01.mp4" type="video/mp4">
+               <source src="./img/back/back03.mp4" type="video/mp4">
             </video>
         </div>
-        <section class="login">
-            <p id="today"> </p>
+        <!-- 일시 -->
+        <section class="calender">
+            <p id="today"></p>
             <p id="clock">00:00</p>
             <p id="greeting" class="hidden"></p>
-            <form id="login-form" class="hidden" >
-                <input 
-                required 
-                maxlength="15" 
-                type="text" 
-                placeholder="what is your name?" />
-                <button>Log in</button>
+        </section>
+        <!-- 로그인 -->
+        <section class="login">
+            <form id="login-form" class="hidden">
+                <input required maxlength="15" type="text" placeholder="what is your name?"/>
+                <button type="submit">Log in</button>
             </form>
+        </section>
+        <!-- ToDoInput -->
+        <section class="toDoInput">
             <form id="todo-form">
                 <input type="text" required placeholder="Write a To Do and Press Enther">
             </form>
         </section>
+        <!-- ToDoList -->
+        <section class="ToDoList">
+            <ul id="todo-list"></ul>
+            <div id="quote">
+                <span></span>
+                <span></span>
+            </div>
+            <div id="weather">
+                <span></span>
+                <span></span>
+            </div>
+        </section>
 
-        <ul id="todo-list"></ul>
-        <div id="quote">
-            <span></span>
-            <span></span>
-        </div>
-        <div id="weather">
-            <span></span>
-            <span></span>
-        </div> 
-     
     </div>
+
     <script src="js/greeting.js"></script> 
-    <script src="js/clock.js"></script>
+    <script src="js/calender.js"></script>
     <script src="js/quote.js"></script> 
     <script src="js/background.js"></script> 
     <script src="js/todo.js"></script> 
